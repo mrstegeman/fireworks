@@ -8,3 +8,7 @@ This is a fireworks simulator for the terminal using ncurses.
 $ make
 $ ./main
 ```
+
+# Demonstration
+
+![](demo-fireworks.gif)
