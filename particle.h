@@ -1,4 +1,4 @@
-/*
+/**
  * particle.h
  *
  * Author: Michael Stegeman
@@ -7,17 +7,21 @@
  * Description: Forward declaration of particle structure
  */
 
-struct particle
-{
-	float pos[2];
-	float vel[2];
-	float life;
-	char sym;
-	int color;
-};
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
 
-void particle_init(struct particle *p, int size);
+typedef struct particle_t {
+    float pos[2];
+    float center[2];
+    float vel[2];
+    float life;
+    uint8_t color;
+    bool exploded;
+} particle;
 
-void particle_update(struct particle *p, float dt, int size);
+void particle_init(particle *p, size_t size);
 
-void particle_draw(struct particle *p, int size);
+void particle_update(particle *p, float dt, size_t size);
+
+void particle_draw(particle *p, size_t size);

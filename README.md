@@ -11,4 +11,4 @@ $ ./main
 
 # Demonstration
 
-![](demo-fireworks.gif)
+![](demo.gif)
